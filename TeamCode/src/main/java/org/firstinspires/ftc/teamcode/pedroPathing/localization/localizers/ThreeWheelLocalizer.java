@@ -1,5 +1,7 @@
 package org.firstinspires.ftc.teamcode.pedroPathing.localization.localizers;
 
+import static org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion.telemetry;
+
 import com.acmerobotics.dashboard.config.Config;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -89,7 +91,7 @@ public class ThreeWheelLocalizer extends Localizer {
         rightEncoder = new Encoder(hardwareMap.get(DcMotorEx.class, "rightFront"));
         strafeEncoder = new Encoder(hardwareMap.get(DcMotorEx.class, "strafeEncoder"));
 
-        // TODO: reverse any encoders necessary
+        // TODO: reverse any encoders necessary --> can check using telemetry
         leftEncoder.setDirection(Encoder.REVERSE);
         rightEncoder.setDirection(Encoder.REVERSE);
         strafeEncoder.setDirection(Encoder.FORWARD);
